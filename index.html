@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>type= "text/javacsript"  
+    //Se pide el primer valor
+        valor1 = prompt("Introduce el primer numero");
+    //Se pide el segundo valor
+        valor2 = prompt("Introduce el segundo numero");
+    //Los 2 valores ingresados por teclado se convierten a flotante para evitar problemas a la hora de trabajar con las operaciones
+        valor1 = parseFloat(valor1)
+        valor2 = parseFloat(valor2)
+    //Se inicia un variable contador con la cual se va a trabajar tanto el ciclo for como el switch
+        var countdown = 1;
+    //Se inicia el bucle donde la variable a utilizar es el contador, y mientras sea menor a 6 seguira incrementando en 1 hasta que se cumpla la condicion
+        for (countdown; countdown<6; countdown++){
+    //Se usa un switch con la variable contador para representar los casos y como este aumenta de 1 en 1 en cada iteracion 
+    //pasara a ser una de las operaciones pedidas
+            switch (countdown) {
+                case 1:
+                    //En este caso se suman los 2 valores
+                    var suma = valor1 + valor2;
+                    alert("La suma de los dos valores es "+suma)
+                    break;
+                
+                case 2:
+                    //En este caso se resta el valor1 menos el valor2
+                    var resta = valor1 - valor2;
+                    alert("La resta de los dos valores es "+resta)
+                    break;
+                case 3:
+                    //En este caso se multiplican ambos valores
+                    var mul = valor1 * valor2;
+                    alert("La multiplicacion de los dos valores es "+ mul)
+                    break;                    
+                case 4:
+                    //En este caso se divide el valor1 dividido por el valor2
+                    var div = valor1 / valor2;
+                    alert("La division de los dos valores es "+div)
+                    break;
+                case 5:
+                    //En este caso se divide el valor1 dividido por el valor2 y luego se obtiene el residuo
+                    var modi = valor1 % valor2;
+                    alert("EL residuo de la division de los dos valores es "+modi)
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
